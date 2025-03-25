@@ -6905,3 +6905,2119 @@ AttributeError: 'NoneType' object has no attribute 'rollback'
 2025-03-25 20:36:03,854 WARNING topup_cheker_all Lines not done topups - 0
 2025-03-25 20:36:33,859 WARNING topup_cheker_all Lines not done topups - 0
 2025-03-25 20:37:03,862 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:37:33,875 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:38:03,891 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:38:33,888 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:39:03,903 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:39:33,917 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:40:03,925 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:40:11,837 ERROR create_room_game Error in create_room_game: 'NoneType' object has no attribute 'commit'
+2025-03-25 20:40:11,838 ERROR _process_update Cause exception while process update id=882253298 by bot id=7591710986
+AttributeError: 'NoneType' object has no attribute 'rollback'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 64, in games_offline
+    room_id = (await db.check_free_room(game, sum))[0]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 55, in create_room_game
+    self.connection.commit()  # Подтверждение изменений в базе данных
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'commit'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 68, in games_offline
+    await db.create_room_game(game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 58, in create_room_game
+    self.connection.rollback()  # Откат транзакции в случае ошибки
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'rollback'
+2025-03-25 20:40:33,926 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:41:03,941 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:41:33,947 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:42:03,964 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:42:33,978 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:43:03,999 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:43:34,007 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:44:04,014 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:44:17,028 WARNING main Bot stopped by user!
+2025-03-25 20:45:22,601 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:45:22,606 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:45:22,606 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:45:22,607 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Checkers.winner_warned_checker() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:127> exception=AttributeError("'BotDB' object has no attribute 'get_no_warned_player_lines'")>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 130, in winner_warned_checker
+    count_lines = await db.get_no_warned_player_lines()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'get_no_warned_player_lines'
+2025-03-25 20:45:52,608 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:46:22,612 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:46:52,612 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:47:22,564 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:47:22,568 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:47:22,568 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:47:22,568 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Checkers.winner_warned_checker() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:127> exception=AttributeError("'BotDB' object has no attribute 'get_no_warned_player_lines'")>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 130, in winner_warned_checker
+    count_lines = await db.get_no_warned_player_lines()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'get_no_warned_player_lines'
+2025-03-25 20:47:32,117 ERROR _process_update Cause exception while process update id=882253323 by bot id=7591710986
+AttributeError: 'BotDB' object has no attribute 'add_user_to_game_room'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 70, in games_offline
+    await db.add_user_to_game_room(room_id, message.chat.id, 0, game, await db.get_user_balance(message.chat.id))
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'add_user_to_game_room'
+2025-03-25 20:47:52,577 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:48:12,492 WARNING main Bot stopped by user!
+2025-03-25 20:48:22,445 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:48:22,449 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:48:22,450 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:48:22,450 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Checkers.winner_warned_checker() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:127> exception=AttributeError("'BotDB' object has no attribute 'get_no_warned_player_lines'")>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 130, in winner_warned_checker
+    count_lines = await db.get_no_warned_player_lines()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'get_no_warned_player_lines'
+2025-03-25 20:48:29,314 ERROR _process_update Cause exception while process update id=882253325 by bot id=7591710986
+AttributeError: 'BotDB' object has no attribute 'add_user_to_game_room'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 70, in games_offline
+    await db.add_user_to_game_room(room_id, message.chat.id, 0, game, await db.get_user_balance(message.chat.id))
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'add_user_to_game_room'
+2025-03-25 20:48:52,455 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:49:22,458 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:49:27,532 WARNING main Bot stopped by user!
+2025-03-25 20:49:36,564 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:49:36,567 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:49:36,568 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:49:36,568 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Checkers.winner_warned_checker() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:127> exception=AttributeError("'BotDB' object has no attribute 'get_no_warned_player_lines'")>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 130, in winner_warned_checker
+    count_lines = await db.get_no_warned_player_lines()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'get_no_warned_player_lines'
+2025-03-25 20:49:46,053 ERROR create_room_game Error in create_room_game: 'NoneType' object has no attribute 'commit'
+2025-03-25 20:49:46,054 ERROR _process_update Cause exception while process update id=882253328 by bot id=7591710986
+AttributeError: 'NoneType' object has no attribute 'rollback'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 64, in games_offline
+    room_id = (await db.check_free_room(game, sum))[0]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 55, in create_room_game
+    self.connection.commit()  # Подтверждение изменений в базе данных
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'commit'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 68, in games_offline
+    await db.create_room_game(game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 58, in create_room_game
+    self.connection.rollback()  # Откат транзакции в случае ошибки
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'rollback'
+2025-03-25 20:50:06,573 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:50:36,576 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:50:36,669 WARNING main Bot stopped by user!
+2025-03-25 20:50:46,306 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:50:46,309 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:50:46,310 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:50:46,310 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Checkers.winner_warned_checker() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:127> exception=AttributeError("'BotDB' object has no attribute 'get_no_warned_player_lines'")>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 130, in winner_warned_checker
+    count_lines = await db.get_no_warned_player_lines()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'get_no_warned_player_lines'
+2025-03-25 20:51:04,440 WARNING main Bot stopped by user!
+2025-03-25 20:51:13,755 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:51:13,759 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:51:13,760 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:51:13,760 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Checkers.winner_warned_checker() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:127> exception=AttributeError("'BotDB' object has no attribute 'get_no_warned_player_lines'")>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 130, in winner_warned_checker
+    count_lines = await db.get_no_warned_player_lines()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'get_no_warned_player_lines'
+2025-03-25 20:51:43,778 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:52:13,779 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:52:43,780 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:52:47,957 WARNING main Bot stopped by user!
+2025-03-25 20:52:58,604 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:52:58,607 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:52:58,608 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:52:58,615 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  отношение "player_lines" не существует
+LINE 1: SELECT COUNT(*) FROM player_lines WHERE warned = FALSE
+                             ^
+
+2025-03-25 20:52:58,615 WARNING winner_warned_checker Lines not warned winners - None
+2025-03-25 20:52:58,616 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Checkers.winner_warned_checker() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:127> exception=TypeError("'<' not supported between instances of 'int' and 'NoneType'")>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 133, in winner_warned_checker
+    while M < count_lines:
+          ^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'NoneType'
+2025-03-25 20:53:28,616 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Checkers.topup_cheker_all() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:15> exception=InFailedSqlTransaction('ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются\n')>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 18, in topup_cheker_all
+    logs.warning(f"Lines not done topups - {await db.get_lines_not_done_topup()}")
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 61, in get_lines_not_done_topup
+    self.cursor.execute("SELECT COUNT (*) FROM payments WHERE (accrued = true and done = false)")
+psycopg2.errors.InFailedSqlTransaction: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 20:54:01,245 WARNING main Bot stopped by user!
+2025-03-25 20:54:11,096 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:54:11,099 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:54:11,100 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:54:11,101 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:54:22,197 ERROR create_room_game Error in create_room_game: 'NoneType' object has no attribute 'commit'
+2025-03-25 20:54:22,198 ERROR _process_update Cause exception while process update id=882253331 by bot id=7591710986
+AttributeError: 'NoneType' object has no attribute 'rollback'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 64, in games_offline
+    room_id = (await db.check_free_room(game, sum))[0]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 55, in create_room_game
+    self.connection.commit()  # Подтверждение изменений в базе данных
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'commit'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 68, in games_offline
+    await db.create_room_game(game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 58, in create_room_game
+    self.connection.rollback()  # Откат транзакции в случае ошибки
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'rollback'
+2025-03-25 20:54:41,095 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:54:41,098 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:55:11,110 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:55:11,112 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:55:41,122 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:55:41,123 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:56:11,131 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:56:11,132 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:56:41,139 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:56:41,140 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:56:46,045 WARNING main Bot stopped by user!
+2025-03-25 20:56:56,728 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:56:56,732 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:56:56,733 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:56:56,734 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:57:04,940 ERROR _process_update Cause exception while process update id=882253334 by bot id=7591710986
+AttributeError: 'BotDB' object has no attribute 'add_user_to_game_room'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 70, in games_offline
+    await db.add_user_to_game_room(room_id, message.chat.id, 0, game, await db.get_user_balance(message.chat.id))
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'add_user_to_game_room'
+2025-03-25 20:57:26,747 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:57:26,748 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:57:56,762 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:57:56,764 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:57:57,972 WARNING main Bot stopped by user!
+2025-03-25 20:58:08,204 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:58:08,207 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:58:08,208 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:58:08,210 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:58:15,729 ERROR add_user_to_game_room Error in add_user_to_game_room: ОШИБКА:  отношение "game_room_users" не существует
+LINE 2:                 INSERT INTO game_room_users (room_id, user_i...
+                                    ^
+
+2025-03-25 20:58:15,731 ERROR _process_update Cause exception while process update id=882253337 by bot id=7591710986
+AttributeError: 'BotDB' object has no attribute 'set_room_full'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 71, in games_offline
+    await db.set_room_full(room_id)
+          ^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'set_room_full'
+2025-03-25 20:58:38,212 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:58:38,213 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:59:08,235 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:59:08,238 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:59:35,380 WARNING main Bot stopped by user!
+2025-03-25 20:59:45,262 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 20:59:45,265 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 20:59:45,265 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 20:59:45,267 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 20:59:55,936 ERROR set_room_full Error in set_room_full: ОШИБКА:  отношение "game_rooms" не существует
+LINE 2:                 UPDATE game_rooms
+                               ^
+
+2025-03-25 20:59:56,019 ERROR _process_update Cause exception while process update id=882253342 by bot id=7591710986
+AttributeError: 'BotDB' object has no attribute 'win_num_check'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 82, in games_offline
+    if await db.win_num_check(room_id) == 0:
+             ^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'win_num_check'
+2025-03-25 21:00:15,277 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:00:15,278 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:00:45,289 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:00:45,292 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:01:15,303 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:01:15,306 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:01:35,038 WARNING main Bot stopped by user!
+2025-03-25 21:01:43,924 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:01:43,927 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:01:43,928 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:01:43,929 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:01:55,078 ERROR win_num_check Error in win_num_check: ОШИБКА:  столбец "is_winner" не существует
+LINE 4:                 WHERE room_id = 7 AND is_winner = TRUE
+                                              ^
+
+2025-03-25 21:01:55,079 ERROR _process_update Cause exception while process update id=882253347 by bot id=7591710986
+InFailedSqlTransaction: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 83, in games_offline
+    await db.set_topup_balance(message.chat.id, float(sum) * coef)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 133, in set_topup_balance
+    self.cursor.execute("UPDATE users SET balance = balance+ %s WHERE user_id = %s", (sum_topup, user_id,))
+psycopg2.errors.InFailedSqlTransaction: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:02:13,945 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Checkers.topup_cheker_all() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:15> exception=InFailedSqlTransaction('ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются\n')>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 18, in topup_cheker_all
+    logs.warning(f"Lines not done topups - {await db.get_lines_not_done_topup()}")
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 58, in get_lines_not_done_topup
+    self.cursor.execute("SELECT COUNT (*) FROM payments WHERE (accrued = true and done = false)")
+psycopg2.errors.InFailedSqlTransaction: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:02:13,949 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:02:13,949 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:02:43,971 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:02:43,972 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:03:13,972 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:03:13,973 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:03:31,856 ERROR _process_update Cause exception while process update id=882253348 by bot id=7591710986
+InFailedSqlTransaction: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 30, in __call__
+    if not await _is_bot_blocked(message.from_user.id):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 108, in get_bot_block
+    self.cursor.execute("SELECT bot_blocked FROM users WHERE user_id = %s", (user_id,))
+psycopg2.errors.InFailedSqlTransaction: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:03:43,972 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:03:43,973 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:04:13,975 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:04:13,976 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:04:44,000 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:04:44,001 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:05:13,999 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:05:13,999 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:05:44,018 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:05:44,019 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:06:14,019 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:06:14,020 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:06:44,022 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:06:44,023 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:07:14,051 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:07:14,052 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:07:44,066 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:07:44,067 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:08:14,077 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:08:14,077 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:08:44,083 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:08:44,084 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:09:04,551 WARNING main Bot stopped by user!
+2025-03-25 21:09:13,103 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:09:13,106 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:09:13,107 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:09:13,109 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:09:26,470 ERROR _process_update Cause exception while process update id=882253353 by bot id=7591710986
+TypeError: BotDB.check_free_room() takes 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 108, in games_online
+    room_id = (await db.check_free_room(game, sum))[0]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 88, in bet_sum_checker
+    await games.Games().games_online(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 115, in games_online
+    room_id = (await db.check_free_room(game, sum, "DESC"))[0]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BotDB.check_free_room() takes 3 positional arguments but 4 were given
+2025-03-25 21:09:36,217 ERROR win_num_check Error in win_num_check: ОШИБКА:  столбец "is_winner" не существует
+LINE 4:                 WHERE room_id = 8 AND is_winner = TRUE
+                                              ^
+
+2025-03-25 21:09:36,219 ERROR _process_update Cause exception while process update id=882253358 by bot id=7591710986
+InFailedSqlTransaction: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 83, in games_offline
+    await db.set_topup_balance(message.chat.id, float(sum) * coef)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 133, in set_topup_balance
+    self.cursor.execute("UPDATE users SET balance = balance+ %s WHERE user_id = %s", (sum_topup, user_id,))
+psycopg2.errors.InFailedSqlTransaction: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:09:43,113 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Checkers.topup_cheker_all() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:15> exception=InFailedSqlTransaction('ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются\n')>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 18, in topup_cheker_all
+    logs.warning(f"Lines not done topups - {await db.get_lines_not_done_topup()}")
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 58, in get_lines_not_done_topup
+    self.cursor.execute("SELECT COUNT (*) FROM payments WHERE (accrued = true and done = false)")
+psycopg2.errors.InFailedSqlTransaction: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:09:43,117 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:09:43,117 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:10:13,124 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:10:13,125 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:10:43,134 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:10:43,134 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:11:13,146 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:11:13,146 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:11:43,133 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: ОШИБКА:  текущая транзакция прервана, команды до конца блока транзакции игнорируются
+
+2025-03-25 21:11:43,133 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:11:45,773 WARNING main Bot stopped by user!
+2025-03-25 21:11:55,243 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:11:55,244 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:11:55,245 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Checkers.winner_warned_checker() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:127> exception=AttributeError("'BotDB' object has no attribute 'get_no_warned_player_lines'")>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 130, in winner_warned_checker
+    count_lines = await db.get_no_warned_player_lines()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'get_no_warned_player_lines'
+2025-03-25 21:11:55,251 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:12:25,251 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:12:55,262 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:13:25,268 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:13:49,067 WARNING main Bot stopped by user!
+2025-03-25 21:13:58,608 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:13:58,609 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:13:58,609 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: cannot perform operation: another operation is in progress
+2025-03-25 21:13:58,610 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:13:58,613 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:14:16,066 ERROR add_user_to_game_room Error in add_user_to_game_room: invalid input for query argument $1: <Record room_id=8> ('asyncpg.Record' object cannot be interpreted as an integer)
+2025-03-25 21:14:16,069 ERROR set_room_full Error in set_room_full: invalid input for query argument $1: <Record room_id=8> ('asyncpg.Record' object cannot be interpreted as an integer)
+2025-03-25 21:14:16,238 ERROR win_num_check Error in win_num_check: столбец "is_winner" не существует
+2025-03-25 21:14:16,240 ERROR _process_update Cause exception while process update id=882253366 by bot id=7591710986
+AttributeError: 'BotDB' object has no attribute 'update_win_num_in'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 84, in games_offline
+    await db.update_win_num_in(int(msg.dice.value), room_id)
+          ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'update_win_num_in'
+2025-03-25 21:14:28,608 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Checkers.topup_cheker_all() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:15> exception=InterfaceError('cannot perform operation: another operation is in progress')>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 18, in topup_cheker_all
+    logs.warning(f"Lines not done topups - {await db.get_lines_not_done_topup()}")
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 53, in get_lines_not_done_topup
+    result = await self.conn.fetchval("SELECT COUNT (*) FROM payments WHERE (accrued = TRUE AND done = FALSE)")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 714, in fetchval
+    data = await self._execute(query, args, 1, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1863, in _execute
+    with self._stmt_exclusive_section:
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 2625, in __enter__
+    raise exceptions.InterfaceError(
+asyncpg.exceptions._base.InterfaceError: cannot perform operation: another operation is in progress
+2025-03-25 21:14:28,619 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:14:58,633 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:15:28,647 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:15:58,651 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:16:28,665 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:16:58,689 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:17:28,694 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:17:34,566 WARNING main Bot stopped by user!
+2025-03-25 21:19:36,557 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:19:36,558 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:19:36,558 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: cannot perform operation: another operation is in progress
+2025-03-25 21:19:36,558 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:19:36,562 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:20:06,570 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Checkers.topup_cheker_all() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:15> exception=InterfaceError('cannot perform operation: another operation is in progress')>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 18, in topup_cheker_all
+    logs.warning(f"Lines not done topups - {await db.get_lines_not_done_topup()}")
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 53, in get_lines_not_done_topup
+    result = await self.conn.fetchval("SELECT COUNT (*) FROM payments WHERE (accrued = TRUE AND done = FALSE)")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 714, in fetchval
+    data = await self._execute(query, args, 1, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1863, in _execute
+    with self._stmt_exclusive_section:
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 2625, in __enter__
+    raise exceptions.InterfaceError(
+asyncpg.exceptions._base.InterfaceError: cannot perform operation: another operation is in progress
+2025-03-25 21:20:06,576 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:20:36,580 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:21:06,586 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:21:36,600 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:22:06,625 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:22:36,624 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:23:06,620 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:23:36,645 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:24:06,642 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:24:36,648 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:25:06,669 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:25:36,681 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:26:06,688 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:26:36,701 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:26:42,183 WARNING main Bot stopped by user!
+2025-03-25 21:26:49,813 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:26:49,814 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:26:49,814 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: cannot perform operation: another operation is in progress
+2025-03-25 21:26:49,814 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:26:49,817 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:27:00,247 ERROR add_user_to_game_room Error in add_user_to_game_room: invalid input for query argument $1: <Record room_id=7> ('asyncpg.Record' object cannot be interpreted as an integer)
+2025-03-25 21:27:00,249 ERROR set_room_full Error in set_room_full: invalid input for query argument $1: <Record room_id=7> ('asyncpg.Record' object cannot be interpreted as an integer)
+2025-03-25 21:27:00,364 ERROR win_num_check Error in win_num_check: invalid input for query argument $1: <Record room_id=7> ('asyncpg.Record' object cannot be interpreted as an integer)
+2025-03-25 21:27:00,367 ERROR _process_update Cause exception while process update id=882253371 by bot id=7591710986
+AttributeError: 'BotDB' object has no attribute 'update_win_num_in'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 84, in games_offline
+    await db.update_win_num_in(int(msg.dice.value), room_id)
+          ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'update_win_num_in'
+2025-03-25 21:27:19,826 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Checkers.topup_cheker_all() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:15> exception=InterfaceError('cannot perform operation: another operation is in progress')>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 18, in topup_cheker_all
+    logs.warning(f"Lines not done topups - {await db.get_lines_not_done_topup()}")
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 53, in get_lines_not_done_topup
+    result = await self.conn.fetchval("SELECT COUNT (*) FROM payments WHERE (accrued = TRUE AND done = FALSE)")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 714, in fetchval
+    data = await self._execute(query, args, 1, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1863, in _execute
+    with self._stmt_exclusive_section:
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 2625, in __enter__
+    raise exceptions.InterfaceError(
+asyncpg.exceptions._base.InterfaceError: cannot perform operation: another operation is in progress
+2025-03-25 21:27:19,837 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:27:49,854 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:28:19,857 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:28:49,865 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:29:19,874 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:29:49,872 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:30:19,887 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:30:35,203 WARNING main Bot stopped by user!
+2025-03-25 21:30:43,966 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:30:43,967 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:30:43,967 ERROR get_no_warned_player_lines Error in get_no_warned_player_lines: cannot perform operation: another operation is in progress
+2025-03-25 21:30:43,967 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:30:43,971 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:30:52,913 ERROR add_user_to_game_room Error in add_user_to_game_room: invalid input for query argument $1: <Record room_id=14> ('asyncpg.Record' object cannot be interpreted as an integer)
+2025-03-25 21:30:52,914 ERROR set_room_full Error in set_room_full: invalid input for query argument $1: <Record room_id=14> ('asyncpg.Record' object cannot be interpreted as an integer)
+2025-03-25 21:30:53,036 ERROR win_num_check Error in win_num_check: invalid input for query argument $1: <Record room_id=14> ('asyncpg.Record' object cannot be interpreted as an integer)
+2025-03-25 21:30:53,044 ERROR _process_update Cause exception while process update id=882253374 by bot id=7591710986
+UndefinedColumnError: столбец "room_id" не существует
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 84, in games_offline
+    await db.update_win_num_in(int(msg.dice.value), room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 169, in update_win_num_in
+    await self.conn.execute(query, win_num, room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 352, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1864, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1961, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 2004, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\\protocol\\protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: столбец "room_id" не существует
+2025-03-25 21:31:13,965 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Checkers.topup_cheker_all() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:15> exception=InterfaceError('cannot perform operation: another operation is in progress')>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 18, in topup_cheker_all
+    logs.warning(f"Lines not done topups - {await db.get_lines_not_done_topup()}")
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 53, in get_lines_not_done_topup
+    result = await self.conn.fetchval("SELECT COUNT (*) FROM payments WHERE (accrued = TRUE AND done = FALSE)")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 714, in fetchval
+    data = await self._execute(query, args, 1, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1863, in _execute
+    with self._stmt_exclusive_section:
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 2625, in __enter__
+    raise exceptions.InterfaceError(
+asyncpg.exceptions._base.InterfaceError: cannot perform operation: another operation is in progress
+2025-03-25 21:31:13,971 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:31:43,977 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:32:13,998 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:32:44,000 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:33:14,005 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:33:27,787 WARNING main Bot stopped by user!
+2025-03-25 21:33:37,196 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:33:37,197 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:33:37,208 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:33:37,208 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:33:44,127 ERROR add_user_to_game_room Error in add_user_to_game_room: повторяющееся значение ключа нарушает ограничение уникальности "game_room_users_pkey"
+DETAIL:  Ключ "(room_id, user_id)=(7, 975308740)" уже существует.
+2025-03-25 21:33:44,273 ERROR _process_update Cause exception while process update id=882253377 by bot id=7591710986
+UndefinedColumnError: столбец "room_id" не существует
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 84, in games_offline
+    await db.update_win_num_in(int(msg.dice.value), room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 194, in update_win_num_in
+    await connection.execute(query, win_num, room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 352, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1864, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1961, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 2004, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\\protocol\\protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: столбец "room_id" не существует
+2025-03-25 21:34:07,230 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:34:07,231 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:34:37,236 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:34:37,236 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:35:07,235 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:35:07,236 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:35:17,501 WARNING main Bot stopped by user!
+2025-03-25 21:35:26,679 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:35:26,680 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:35:26,686 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:35:26,687 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:35:34,573 ERROR add_user_to_game_room Error in add_user_to_game_room: повторяющееся значение ключа нарушает ограничение уникальности "game_room_users_pkey"
+DETAIL:  Ключ "(room_id, user_id)=(7, 975308740)" уже существует.
+2025-03-25 21:35:34,775 ERROR _process_update Cause exception while process update id=882253380 by bot id=7591710986
+UndefinedColumnError: столбец "room_id" не существует
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 84, in games_offline
+    await db.update_win_num_in(int(msg.dice.value), room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 214, in update_win_num_in
+    await connection.execute(query, win_num, room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 352, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1864, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1961, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 2004, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\\protocol\\protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: столбец "room_id" не существует
+2025-03-25 21:35:56,694 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:35:56,695 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:36:26,724 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:36:26,725 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:36:56,733 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:36:56,734 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:37:26,743 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:37:26,744 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:37:41,465 WARNING main Bot stopped by user!
+2025-03-25 21:37:50,866 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:37:50,868 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:37:50,872 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:37:50,873 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:38:01,032 ERROR add_user_to_game_room Error in add_user_to_game_room: столбец "room_id" в таблице "game_room_users" не существует
+2025-03-25 21:38:01,318 ERROR win_num_check Error in win_num_check: столбец "room_id" не существует
+2025-03-25 21:38:01,322 ERROR _process_update Cause exception while process update id=882253383 by bot id=7591710986
+UndefinedColumnError: столбец "room_id" не существует
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 84, in games_offline
+    await db.update_win_num_in(int(msg.dice.value), room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 214, in update_win_num_in
+    await connection.execute(query, win_num, room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 352, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1864, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1961, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 2004, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\\protocol\\protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: столбец "room_id" не существует
+2025-03-25 21:38:20,885 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:38:20,886 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:38:50,896 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:38:50,896 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:39:20,909 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:39:20,910 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:39:50,920 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:39:50,921 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:39:55,456 WARNING main Bot stopped by user!
+2025-03-25 21:40:05,664 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:40:05,665 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:40:05,671 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:40:05,671 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:40:13,862 ERROR add_user_to_game_room Error in add_user_to_game_room: значение NULL в столбце "game_id" отношения "game_room_users" нарушает ограничение NOT NULL
+DETAIL:  Ошибочная строка содержит (null, 975308740, 0.00, slot, 9450.00, null, 8).
+2025-03-25 21:40:14,120 ERROR _process_update Cause exception while process update id=882253386 by bot id=7591710986
+UndefinedColumnError: столбец "room_id" не существует
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 84, in games_offline
+    await db.update_win_num_in(int(msg.dice.value), room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 214, in update_win_num_in
+    await connection.execute(query, win_num, room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 352, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1864, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1961, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 2004, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\\protocol\\protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: столбец "room_id" не существует
+2025-03-25 21:40:35,678 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:40:35,680 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:41:05,689 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:41:05,689 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:41:35,689 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:41:35,690 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:42:05,688 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:42:05,689 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:42:35,697 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:42:35,698 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:43:05,726 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:43:05,727 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:43:05,990 WARNING main Bot stopped by user!
+2025-03-25 21:43:15,663 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:43:15,664 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:43:15,669 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:43:15,669 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:43:22,146 ERROR add_user_to_game_room Error in add_user_to_game_room: значение NULL в столбце "game_id" отношения "game_room_users" нарушает ограничение NOT NULL
+DETAIL:  Ошибочная строка содержит (null, 975308740, 0.00, cube, 9550.00, null, 7).
+2025-03-25 21:43:22,338 ERROR _process_update Cause exception while process update id=882253389 by bot id=7591710986
+UndefinedColumnError: столбец "room_id" не существует
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 84, in games_offline
+    await db.update_win_num_in(int(msg.dice.value), room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\db.py", line 224, in update_win_num_in
+    await connection.execute(query, win_num, room_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 352, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1864, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 1961, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 2004, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\asyncpg\connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\\protocol\\protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: столбец "room_id" не существует
+2025-03-25 21:43:45,697 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:43:45,698 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:44:15,712 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:44:15,713 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:44:45,730 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:44:45,731 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:45:15,749 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:45:15,750 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:45:45,746 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:45:45,746 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:46:15,761 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:46:15,761 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:46:45,779 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:46:45,780 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:46:46,468 WARNING main Bot stopped by user!
+2025-03-25 21:46:55,718 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:46:55,719 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:46:55,719 ERROR default_exception_handler Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<Checkers.winner_warned_checker() done, defined at C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py:127> exception=AttributeError("'BotDB' object has no attribute 'get_no_warned_player_lines'")>
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 130, in winner_warned_checker
+    count_lines = await db.get_no_warned_player_lines()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'get_no_warned_player_lines'
+2025-03-25 21:46:55,726 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:47:25,748 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:47:42,100 WARNING main Bot stopped by user!
+2025-03-25 21:47:55,292 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:47:55,293 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:47:55,300 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:47:55,300 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:48:04,339 ERROR _process_update Cause exception while process update id=882253392 by bot id=7591710986
+TypeError: BotDB.add_user_to_game_room() missing 1 required positional argument: 'game_id'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 383, in creating_room
+    await ch().bet_sum_checker(call.message, callback_data.game, callback_data.sum, callback_data.action, call.message.message_id)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\checkers.py", line 90, in bet_sum_checker
+    await games.Games().games_offline(message, game, sum)
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\games.py", line 70, in games_offline
+    await db.add_user_to_game_room(room_id, message.chat.id, 0, game, await db.get_user_balance(message.chat.id))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BotDB.add_user_to_game_room() missing 1 required positional argument: 'game_id'
+2025-03-25 21:48:12,912 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:48:12,914 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:48:12,957 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:48:12,959 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:48:13,178 ERROR _listen_updates Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-25 21:48:13,178 WARNING _listen_updates Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7591710986)
+2025-03-25 21:48:17,378 ERROR _listen_updates Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-25 21:48:17,379 WARNING _listen_updates Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7591710986)
+2025-03-25 21:48:18,428 ERROR _listen_updates Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-25 21:48:18,429 WARNING _listen_updates Sleep for 1.296180 seconds and try again... (tryings = 1, bot id = 7591710986)
+2025-03-25 21:48:22,889 ERROR _listen_updates Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-25 21:48:22,889 WARNING _listen_updates Sleep for 1.338907 seconds and try again... (tryings = 1, bot id = 7591710986)
+2025-03-25 21:48:24,345 ERROR _listen_updates Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-25 21:48:24,345 WARNING _listen_updates Sleep for 1.615617 seconds and try again... (tryings = 2, bot id = 7591710986)
+2025-03-25 21:48:25,377 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:48:25,378 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:48:29,008 ERROR _listen_updates Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-25 21:48:29,009 WARNING _listen_updates Sleep for 1.850002 seconds and try again... (tryings = 2, bot id = 7591710986)
+2025-03-25 21:48:30,606 WARNING main Bot stopped by user!
+2025-03-25 21:48:30,608 WARNING main Bot stopped by user!
+2025-03-25 21:48:41,034 WARNING topup_cheker_all Topup checker is successfully  started
+2025-03-25 21:48:41,035 WARNING winner_warned_checker Checking the notifications of the winners
+2025-03-25 21:48:41,041 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:48:41,041 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:49:07,215 ERROR _process_update Cause exception while process update id=882253396 by bot id=7591710986
+AttributeError: 'BotDB' object has no attribute 'get_games_lines'
+Traceback (most recent call last):
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\ban_rules_check.py", line 30, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\middlewares\bot_blocked_check.py", line 20, in __call__
+    return await handler(call, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Thinkpad\PycharmProjects\LotEasyBotAio\bot\handlers\user_handlers.py", line 138, in story_oper
+    count_lines = await db.get_games_lines(user_id)
+                        ^^^^^^^^^^^^^^^^^^
+AttributeError: 'BotDB' object has no attribute 'get_games_lines'
+2025-03-25 21:49:11,057 WARNING winner_warned_checker Lines not warned winners - 0
+2025-03-25 21:49:11,057 WARNING topup_cheker_all Lines not done topups - 0
+2025-03-25 21:49:28,907 WARNING main Bot stopped by user!

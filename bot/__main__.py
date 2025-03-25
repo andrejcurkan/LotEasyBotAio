@@ -12,6 +12,14 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from checkers import Checkers as ch
 from configs.env_reader import env_config
 from db_conn_create import db
+import logging
+
+logging.basicConfig(
+    level=logging.DEBUG,  # INFO или DEBUG для максимальной детализации
+    format="%(asctime)s - %(levelname)s - %(message)s",  # Формат логов
+)
+logger = logging.getLogger(__name__)
+
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO)
@@ -98,5 +106,14 @@ async def main():
 
 if __name__ == "__main__":
     # Логируем запуск программы
+    logging.basicConfig(level=logging.DEBUG)
     logger.info("Starting the bot application...")
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.DEBUG)
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+    console_handler.setFormatter(formatter)
+    logging.getLogger().addHandler(console_handler)
+
+    logger.info("StreamHandler добавлен вручную")
+
     asyncio.run(main())
