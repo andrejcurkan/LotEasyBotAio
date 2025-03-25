@@ -1,4 +1,4 @@
 .idea/
 /venv/
-.env
+bot/.env
 /bot/difs/logs.log
